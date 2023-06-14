@@ -2,6 +2,7 @@ TWS Semestrální projekt
 
 Dostupné na:
 * http://stuwrk.nti.tul.cz/~radek.mocek/sp/     (podporuje .htaccess, nepodporuje geolokaci)
+* https://radekmocek.github.io/TWS-Semestral/   (nepodporuje .htaccess, podporuje geolokaci)
 
 Rozšiřující úkoly:
 
@@ -50,7 +51,8 @@ Rozšiřující úkoly:
 
 * Přepínání CSS (bod 3), uložení zvoleného téma do localStorage – ./theme.js
 
-* Využití geolokace na podstránce "Kontakt" – ./geo.js
+* Využití geolokace na podstránce "Kontakt" – ./geo.js (na stuwrku nejde)
+  * Firefox a Chrome dávají stejnou vzdálenost, Edge má potřebu vynikat a liší se zhruba o 5 km
 
 * Na podstránce "Kontakt" je políčko pro vyplnění e-mailu validováno během psaní:
   Vedle políčka je křížek/fajfka a tlačítko Odeslat je disabled dokud není e-mail v pořádku – ./form.js
