@@ -1,0 +1,420 @@
+@import url("https://fonts.cdnfonts.com/css/old-english-five");
+
+:root {
+    --color-navbar-bg: #161516;
+    --color-navbar-active: #88697a;
+    --color-navbar-active-hover: #aa8399;
+    --color-navbar-hover: #666666;
+    --color-navbar-shadow: rgba(0, 0, 0, 0.1);
+    --size-navbar-height: 3rem;
+
+    --color-body-background: rgba(0, 0, 0, 0.075);
+
+    --color-a: #505468;
+    --color-a-hover: #696e88;
+}
+:root.solarized {
+    --color-navbar-active: #5b4636;
+    --color-navbar-active-hover: #886951;
+
+    --color-body-background: #f4ecd8;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    background-color: var(--color-body-background);
+    font-size: 1.05rem;
+
+    /*Aby footer byl vždy dole*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top-img {
+    height: 38vh;
+    background: url("./img/top-img.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    vertical-align: top;
+    transform-origin: center top;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-navbar-bg);
+    box-shadow: 0 3px 3px 0 var(--color-navbar-shadow);
+    z-index: 1;
+}
+header img {
+    /*(svg obrázek)*/
+    max-height: var(--size-navbar-height);
+    margin: 0 2rem 0 1.5rem;
+    pointer-events: none;
+}
+header input {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    font-size: 0;
+    /*Theme toggle switch*/
+    display: flex;
+}
+nav ul {
+    width: 500px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+nav li {
+    text-align: center;
+    flex-grow: 1;
+}
+nav li.active {
+    background-color: var(--color-navbar-active);
+}
+nav li:hover:not(.active) {
+    background-color: var(--color-navbar-hover);
+}
+nav li:hover.active {
+    background-color: var(--color-navbar-active-hover);
+}
+nav a {
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: var(--size-navbar-height);
+}
+
+main {
+    width: 65%;
+    margin: 0 auto;
+
+    /*Aby footer byl vždy dole*/
+    flex-grow: 1;
+}
+/*Nadpisy*/
+main h1,
+main h2,
+main h3 {
+    font-family: "Old English Five", sans-serif;
+}
+main h1 {
+    font-size: 2.25rem;
+}
+/*Odstavec*/
+main p {
+    margin-left: 1rem;
+    line-height: 1.33;
+    text-align: justify;
+}
+/*Seznamy*/
+main ul {
+    list-style-type: "\2020\00a0"; /*U+2020: Křížek*/
+}
+main ul ul {
+    list-style-type: "\2021\00a0"; /*U+2021: Dvojitý křížek*/
+}
+main ol {
+    list-style-type: upper-roman;
+}
+main ol ol {
+    list-style-type: lower-roman;
+}
+/*Odkazy*/
+main a:link,
+footer a:link {
+    color: var(--color-a);
+}
+main a:link:hover,
+footer a:link:hover {
+    color: var(--color-a-hover);
+}
+main a:visited,
+footer a:visited {
+    color: var(--color-navbar-active);
+}
+main a:visited:hover,
+footer a:visited:hover {
+    color: var(--color-navbar-active-hover);
+}
+/*Obrázky*/
+main figure.image {
+    margin: 1.5rem auto;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 860px;
+}
+main figure.image img {
+    display: block;
+    width: 100%;
+}
+main figure.image figcaption {
+    background-color: var(--color-navbar-bg);
+    color: white;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+/*Audio*/
+main figure.audio {
+    margin: 0;
+}
+
+footer {
+    color: white;
+    background-color: var(--color-navbar-bg);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.person-section {
+    margin: 1rem auto;
+}
+
+.person-content {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+}
+.person-content figure.image {
+    min-width: 250px;
+    margin-top: 12px;
+}
+
+video {
+    width: 100%;
+    max-width: 416px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto 2rem auto;
+    display: block;
+    max-width: -moz-fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+table caption {
+    margin-bottom: 0.5rem;
+}
+th,
+td {
+    border: 1px solid black;
+}
+th {
+    background-color: var(--color-navbar-active-hover);
+}
+td.tick {
+    text-align: center;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+}
+
+.form-with-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form-with-img img {
+    height: 100%;
+}
+.form-with-img textarea {
+    resize: none;
+}
+.form-with-img #happiness {
+    margin-bottom: 0.75rem;
+    accent-color: var(--color-navbar-active-hover);
+}
+
+/*Theme toggle switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    margin: auto 1.5rem auto auto;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-navbar-hover);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--color-navbar-active);
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--color-navbar-active);
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/*Small screen*/
+@media screen and (max-width: 720px) {
+    header {
+        flex-wrap: wrap;
+    }
+    header input {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        /*Theme toggle switch*/
+        border-bottom: 1px solid white;
+    }
+    nav li {
+        text-align: center;
+        padding: 0.33rem;
+        border-top: 1px solid white;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    /*Theme toggle switch*/
+    .switch {
+        margin: 1rem auto;
+    }
+
+    #toggle {
+        display: none;
+    }
+    #toggle:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+    }
+    #toggle:checked ~ label.toggle::after {
+        content: "×";
+    }
+
+    label.toggle {
+        background-color: white;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin: auto 0.75rem;
+        text-align: center;
+        font-size: 1.55rem;
+        border: solid 2px white;
+        /*Posunout na konec flexbox řádku*/
+        margin: auto 1.5rem auto auto;
+    }
+    label.toggle::after {
+        content: "≡";
+    }
+
+    main {
+        width: 90%;
+    }
+    main p {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 1100px) {
+    /*Osobnosti*/
+    .person-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .person-content figure {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /*Formulář s obrázkem*/
+    .form-with-img {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-with-img img {
+        max-width: 164px;
+        margin-bottom: 1rem;
+    }
+}
+
+/*Tiskový výstup*/
+@media print {
+    header,
+    nav,
+    footer span:nth-child(1), /*Skrýt odkazy na validátory*/
+    fieldset,
+    video,
+    main figure.audio,
+    .top-img {
+        display: none;
+    }
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    main {
+        width: 90%;
+    }
+    main figure.image {
+        page-break-inside: avoid; /*Aby se obrázky nenacházely na přechodech mezi vytisklými stránkami*/
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    form::after {
+        content: "Formuláře nejsou obsaženy v\00A0tiskovém výstupu.";
+    }
+
+    /*Patička na každé vytisklé stránce*/
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+
+    @page {
+        size: A3;
+    }
+}

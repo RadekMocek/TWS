@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Dungeon Synth – Osobnosti</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="./img/logo.svg" alt="website logo" />
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick>&#8203;</label>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Úvod</a></li>
+                    <li class="active"><a href="./people.html">Osobnosti</a></li>
+                    <li><a href="./subgenres.html">Příchutě</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
+                </ul>
+                <label class="switch">
+                    <input id="theme-switch" type="checkbox" onclick="toggleSwitch()" />
+                    <span class="slider"></span>&#8203;
+                </label>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h1>Osobnosti</h1>
+                <section class="person-section" id="mortiis">
+                    <h2>Håvard Ellefsen (Mortiis)</h2>
+                    <div class="person-content">
+                        <figure class="image">
+                            <picture>
+                                <source srcset="./img/small/mortiis.png" media="(max-width: 1100px)" />
+                                <img src="./img/mortiis.png" alt="Håvard Ellefsen" />
+                            </picture>
+                        </figure>
+                        <div>
+                            <p>
+                                Håvard Ellefsen v&nbsp;roce 1993 opustil skupinu Emperor, kde hrál na baskytaru, a vytvořil si svou
+                                vlastní hudební identitu – Mortiis. Jeho post-Emperor ambientní díla; jejichž pilíře byly dark fantasy
+                                atmosféra, hra na klávesy a jednoduchá produkce; velmi ovlivnila budoucnost dungeon synthu. Jedná se
+                                o&nbsp;tato alba:
+                            </p>
+                            <ol>
+                                <li>The Song of a Long Forgotten Ghost (1993)</li>
+                                <li>Født til å Herske (1994)</li>
+                                <li>Ånden som Gjorde Opprør (1994)</li>
+                                <li>
+                                    Keiser Av En Dimensjon Ukjent (1995)
+                                    <ol>
+                                        <li>
+                                            Reisene Til Grotter Og Ødemarker – k&nbsp;této skladbě byl natočen 24minutový videoklip,
+                                            který pomohl zavést dungeon synth estetiku
+                                        </li>
+                                        <li>Keiser Av En Dimensjon Ukjent</li>
+                                    </ol>
+                                </li>
+                                <li>Blood and Thunder (1995)</li>
+                                <li>Crypt of the Wizard (1996)</li>
+                                <li>The Stargate (1999)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <h3>Videoklip k Reisene Til Grotter Og Ødemarker</h3>
+                    <video controls>
+                        <source src="./assets/mortiis.mp4" type="video/mp4" />
+                        Váš prohlížeč nepodporuje videa.
+                    </video>
+                </section>
+
+                <section class="person-section" id="burzum">
+                    <h2>Varg Vikernes (Burzum)</h2>
+                    <div class="person-content">
+                        <figure class="image">
+                            <picture>
+                                <source srcset="./img/small/burzum.png" media="(max-width: 1100px)" />
+                                <img src="./img/burzum.png" alt="Varg Vikernes" />
+                            </picture>
+                        </figure>
+                        <p>
+                            Varg Vikernes je jednou z&nbsp;nejvíce (pro většinu nechvalně) známých postav norské black metalové scény.
+                            Důležitost jeho hudebního projektu Burzum je ale tak znatelná, že by neměla být přehlížena. Vargova
+                            provokativní filozofie se projevuje i&nbsp;na produkci jeho alb – skladby jsou nahrány na první dobrou bez
+                            jakékoliv postprodukce a na ty nejméně kvalitní nástroje, co se zrovna nachází ve studiu. Důležitá alba jsou
+                            Dauði Baldrs a Hliðskjálf, kde jediným nástrojem byly klávesy, protože to byl jediný povolený nástroj ve
+                            vězení.
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <span>
+                <a
+                    href="https://html5.validator.nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Eradek.mocek%2Fsp%2Fpeople.html"
+                    target="_blank"
+                >
+                    HTML
+                </a>
+                /
+                <a
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Eradek.mocek%2Fsp%2Fpeople.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs"
+                    target="_blank"
+                >
+                    CSS
+                </a>
+                /
+                <a href="https://wave.webaim.org/report#/http://stuwrk.nti.tul.cz/~radek.mocek/sp/people.html" target="_blank">WCAG</a>
+            </span>
+            <span>&copy; 2023 Radek Mocek</span>
+        </footer>
+        <script src="theme.js"></script>
+    </body>
+</html>

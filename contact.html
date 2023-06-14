@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Dungeon Synth – Kontakt</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="./img/logo.svg" alt="website logo" />
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick>&#8203;</label>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Úvod</a></li>
+                    <li><a href="./people.html">Osobnosti</a></li>
+                    <li><a href="./subgenres.html">Příchutě</a></li>
+                    <li class="active"><a href="./contact.html">Kontakt</a></li>
+                </ul>
+                <label class="switch">
+                    <input id="theme-switch" type="checkbox" onclick="toggleSwitch()" />
+                    <span class="slider"></span>&#8203;
+                </label>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h1>Kontaktujte nás</h1>
+                <form name="form">
+                    <fieldset>
+                        <legend>Kontaktní formulář</legend>
+                        <div class="form-with-img">
+                            <div>
+                                <label for="email">E-mail: *</label>
+                                <br />
+                                <input type="email" id="email" name="email" onkeyup="validateEmail(document.form.email)" />
+                                <span id="email-valid">JavaScript loading</span>
+                                <br /><br />
+                                <label for="message">Zpráva:</label>
+                                <br />
+                                <textarea name="message" id="message" rows="3" cols="30"></textarea>
+                                <br /><br />
+                                <label for="happiness">Jak jste spokojeni s naší stránkou? *</label>
+                                <br />
+                                <input
+                                    type="range"
+                                    id="happiness"
+                                    name="happiness"
+                                    min="1"
+                                    max="6"
+                                    value="1"
+                                    oninput="outputReaction(document.form.happiness.value)"
+                                />
+                            </div>
+                            <img id="form-image" src="./img/form/1.png" alt="Spokojenost" />
+                        </div>
+                        <input type="submit" value="Odeslat" id="submit-button" />
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <h2>Geolokace</h2>
+                <fieldset>
+                    <legend>Výpočet vzdálenosti</legend>
+                    <span>Klikněte na tlačítko a zjistěte Vaši vzdálenost od důležitých bodů na mapě:&ensp;</span>
+                    <button onclick="getLocation()">Vypočítat vzdálenost</button>
+                    <p id="geo-output">Vzdálenost od FM TUL: <b>? km</b>.<br>Vzdálenost od Varga Vikernese: <b>? km</b>.</p>
+                </fieldset>
+            </section>
+        </main>
+
+        <footer>
+            <span>
+                <a
+                    href="https://html5.validator.nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Eradek.mocek%2Fsp%2Fcontact.html"
+                    target="_blank"
+                >
+                    HTML
+                </a>
+                /
+                <a
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Eradek.mocek%2Fsp%2Fcontact.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs"
+                    target="_blank"
+                >
+                    CSS
+                </a>
+                /
+                <a href="https://wave.webaim.org/report#/http://stuwrk.nti.tul.cz/~radek.mocek/sp/contact.html" target="_blank">WCAG</a>
+            </span>
+            <span>&copy; 2023 Radek Mocek</span>
+        </footer>
+        <script src="theme.js"></script>
+        <script src="form.js"></script>
+        <script src="geo.js"></script>
+    </body>
+</html>

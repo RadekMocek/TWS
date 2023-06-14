@@ -1,0 +1,4 @@
+AuthName "Protected Folder"
+AuthType Basic
+AuthUserFile /home/r/radek.mocek/public_html/sp/private/.htpasswd
+Require valid-user

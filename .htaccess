@@ -1,0 +1,15 @@
+# Chybové stránky
+ErrorDocument 401 /~radek.mocek/sp/error/401.html
+ErrorDocument 403 /~radek.mocek/sp/error/403.html
+ErrorDocument 404 /~radek.mocek/sp/error/404.html
+
+# Redirect překlepů
+Redirect 301 /~radek.mocek/sp/iondex.html /~radek.mocek/sp/index.html
+Redirect 301 /~radek.mocek/sp/pepole.html /~radek.mocek/sp/people.html
+Redirect 301 /~radek.mocek/sp/sunfenres.html /~radek.mocek/sp/subgenres.html
+Redirect 301 /~radek.mocek/sp/contant.html /~radek.mocek/sp/contact.html
+
+# Chráněná složka /private
+# - username: tws
+# - heslo: passwd
+# - soubory .htaccess a .htpasswd jsou uvnitř složky

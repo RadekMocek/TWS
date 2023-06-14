@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Dungeon Synth – Příchutě</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="./img/logo.svg" alt="website logo" />
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick>&#8203;</label>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Úvod</a></li>
+                    <li><a href="./people.html">Osobnosti</a></li>
+                    <li class="active"><a href="./subgenres.html">Příchutě</a></li>
+                    <li><a href="./contact.html">Kontakt</a></li>
+                </ul>
+                <label class="switch">
+                    <input id="theme-switch" type="checkbox" onclick="toggleSwitch()" />
+                    <span class="slider"></span>&#8203;
+                </label>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h1>Podz'ánry</h1>
+                <section id="wintersynth">
+                    <h2>Winter synth</h2>
+                    <p>
+                        Winter Synth je hudba, která je inspirována přírodními živly a snaží se je hudebně zachytit. Winter Synth působí
+                        otevřenějším, expanzivnějším dojmem a má hypnotický charakter otevřené krajiny. Svou povahou je o&nbsp;něco
+                        minimalističtější než Dungeon Synth, a proto je zde větší přesah do oblasti dark ambientu a drone. Nejčastějšími
+                        tématy jsou sníh, led, lesy a hory.
+                    </p>
+                    <figure class="audio">
+                        <figcaption>SIMBVL – Marluk (zkráceno)</figcaption>
+                        <audio controls>
+                            <source src="./assets/winter.mp3" type="audio/mpeg" />
+                            Váš prohlížeč nepodporuje audio.
+                        </audio>
+                    </figure>
+                </section>
+                <section>
+                    <h2>Dino synth</h2>
+                    <p>
+                        Dino synth je extrémním důsledkem dungeon synth logiky – pokud je bodem zájmu (imaginární) minulost, proč se
+                        zastavit u&nbsp;středověku? Jedná se o&nbsp;podžánr s&nbsp;prehistorickou tématikou o&nbsp;době kamenné,
+                        jeskynních lidech a dinosaurech z&nbsp;druhohor. Pro vytvoření takovéto atmosféry se užívají dva přístupy
+                        navozující ponurou, často epickou atmosféru: buď cesta dark ambient s&nbsp;prvky drone a noise, nebo filmové
+                        aranže inspirované orchestrální filmovou hudbou.
+                    </p>
+                    <figure class="audio">
+                        <figcaption>Synthosaurus – Winged Menace</figcaption>
+                        <audio controls>
+                            <source src="./assets/dino.mp3" type="audio/mpeg" />
+                            Váš prohlížeč nepodporuje audio.
+                        </audio>
+                    </figure>
+                </section>
+                <section>
+                    <h2>Keller synth (black dungeon)</h2>
+                    <p>
+                        Keller synth je jedním z&nbsp;žánrů, který kombinuje dungeon synth s&nbsp;jiným hudebním stylem. V&nbsp;tomto
+                        případě se jedná o&nbsp;black metal, kde jsou kytary nahrazeny syntetizéry.
+                    </p>
+                    <figure class="audio">
+                        <figcaption>Grollfried – Erlöser von Herne</figcaption>
+                        <audio controls>
+                            <source src="./assets/keller.mp3" type="audio/mpeg" />
+                            Váš prohlížeč nepodporuje audio.
+                        </audio>
+                    </figure>
+                </section>
+                <section>
+                    <h2>Kde zac'ít?</h2>
+
+                    <table>
+                        <caption>
+                            Doporučená alba pro hraní D&D podle
+                            <a href="https://bellerophonticsycamore.wordpress.com/">https://bellerophonticsycamore.wordpress.com/</a>
+                            :
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th colspan="3">Album</th>
+                                <th colspan="4">Prvky</th>
+                            </tr>
+                            <tr>
+                                <th>Umělec</th>
+                                <th>Název alba</th>
+                                <th>Rok</th>
+                                <th>&bdquo;Epic&ldquo;</th>
+                                <th>Synth-centric</th>
+                                <th>Ambient</th>
+                                <th>&bdquo;Magical&ldquo;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lamentation</td>
+                                <td>Fullmoon Over Faerhaaven</td>
+                                <td>1995</td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Dolch</td>
+                                <td>Yggdrasil...Nature...Anthems</td>
+                                <td>1997</td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Lord Wolf</td>
+                                <td>Darklands of Hate</td>
+                                <td rowspan="2">1998</td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Forgotten Pathways</td>
+                                <td>Shrouded in Mystery</td>
+                                <td class="tick">&#10004;</td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Fjelltrone</td>
+                                <td>Skogens Ande</td>
+                                <td>1999</td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Lord Lovidicus</td>
+                                <td>Trolldom</td>
+                                <td>2010</td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                            </tr>
+                            <tr>
+                                <td>Gvasdnahr</td>
+                                <td>Through Mists and Ruins</td>
+                                <td rowspan="2">2011</td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                            </tr>
+                            <tr>
+                                <td>Valscharuhn</td>
+                                <td>Seven Wonders Of The Ancient World</td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                            </tr>
+                            <tr>
+                                <td>Forgotten Dreamscapes</td>
+                                <td>This Place, Where Destiny Is Made</td>
+                                <td>2012</td>
+                                <td class="tick">&#10004;</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Müldeponie / Noldor</td>
+                                <td>Launay Mür</td>
+                                <td>2013</td>
+                                <td></td>
+                                <td></td>
+                                <td class="tick">&#10004;</td>
+                                <td class="tick">&#10004;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <span>
+                <a
+                    href="https://html5.validator.nu/?doc=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Eradek.mocek%2Fsp%2Fsubgenres.html"
+                    target="_blank"
+                >
+                    HTML
+                </a>
+                /
+                <a
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Eradek.mocek%2Fsp%2Fsubgenres.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs"
+                    target="_blank"
+                >
+                    CSS
+                </a>
+                /
+                <a href="https://wave.webaim.org/report#/http://stuwrk.nti.tul.cz/~radek.mocek/sp/subgenres.html" target="_blank">
+                    WCAG
+                </a>
+            </span>
+            <span>&copy; 2023 Radek Mocek</span>
+        </footer>
+        <script src="theme.js"></script>
+    </body>
+</html>
