@@ -2,7 +2,7 @@ TWS Semestrální projekt
 
 Dostupné na:
 * http://stuwrk.nti.tul.cz/~radek.mocek/sp/     (podporuje .htaccess, nepodporuje geolokaci)
-* https://radekmocek.github.io/TWS-Semestral/   (nepodporuje .htaccess, podporuje geolokaci)
+* https://radekmocek.github.io/TWS/             (nepodporuje .htaccess, podporuje geolokaci)
 
 Rozšiřující úkoly:
 
